@@ -1,0 +1,202 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color: black;
+}
+
+header {
+    background-color: #dab3ff;
+    color: black;
+    padding: 15px 0;
+    text-shadow: black;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header > h1 {
+    font-size: 1.8rem;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+}
+
+nav > ul > li {
+    margin: 0 15px;
+}
+
+nav > ul > li > a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav > ul > li > a:hover {
+    color: white;
+}
+
+nav > li :first-child{
+    margin-right: auto;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #b76be4;
+    box-shadow: -20px 0 20px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar > li {
+    width: 100%;
+
+}
+
+.sidebar > li > a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+.karyas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 40px;
+    padding: 20px;
+}
+
+.karya_container > h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.karya {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.karya img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+.karya h3 {
+    margin: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.karya:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+section > h2 {
+    padding: 15px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 40px;
+}
+
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+footer {
+    background-color: purple;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    header > h1 {
+        font-size: 1.5rem;
+    }
+
+    nav > ul {
+        flex-direction: column;
+        align-items: center;
+        transition:all 0.5s;
+    }
+
+    nav > ul > li {
+        margin: 10px 0;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+
+    .karya_all {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .karyas_img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+    }
+    
+    .karya_all {
+        grid-template-columns: 1fr;
+    }
+}
